@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename ='css/material.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename ='css/home.css') }}">
+    <title>Registrar Archivo con Python</title>
+    <link type="text/css" rel="shortcut icon" href="{{ url_for('static', filename ='imgs/logo.png') }}"/>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-dark d-none d-lg-block">
+                <a href="http://127.0.0.1:5000/inicio" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center text-center">
+                    <h1 class="m-0 mt-n2 display-4 text-uppercase" style="font-size: 90%; color: #B49C73;">Valencia Montoya Abogados S.A.S</h1>
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <div class="row bg-white border-bottom d-none d-lg-flex">
+                    <div class="col-lg-7 text-left">
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-3">
+                            <i class="material-icons" style="color: #B49C73;">mail</i>
+                            <small class="ml-2">valencia.abogados.sas@gmail.com</small>
+                        </div>
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                            <i class="material-icons" style="color: #B49C73;">phone</i>
+                            <small class="ml-2">3137937217</small>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <h1 class="m-0 display-4 text-primary text-uppercase">Valencia Montoya Abogados S.A.S</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="http://127.0.0.1:5000/inicio" class="nav-item nav-link">Inicio</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">menu</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="http://127.0.0.1:5500/lawyer-website-template/index.html#" class="dropdown-item">Menu principal</a>
+                                    <iframe src="https://maps.app.goo.gl/cXMVKvZvFGRoY5jN8" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/573238834526" class="nav-item nav-link active">Contacto</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <h2 class="text-center mt-3" id="este">REPOSITORIO DE LOS CASOS</h2>
+    </section>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <form action="/" method="get" class="mb-4 d-flex align-items-center">
+                    <input type="text" name="search" placeholder="Buscar archivos" value="{{ search_query }}" class="form-control">
+                    <button type="submit" class="btn btn-primary ml-2">Buscar</button>
+                    <i class="material-icons ml-2">search</i>
+                </form>
+
+                <h3>Archivos Disponibles para Descargar<hr></h3>
+                <ul class="list-group">
+                    {% for archivo in archivos %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            {{ archivo }}
+                            <a href="/descargar-archivo/{{ archivo }}" class="btn btn-primary btn-sm">Descargar</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                
+                <hr>
+                <h3>Subir Archivo<hr></h3>
+                <form action="{{ url_for('registarArchivo') }}" method="POST" autocomplete="off" enctype="multipart/form-data">
+                    <div class="custom-file mb-3">
+                        <input type="file" name="archivo" class="custom-file-input" required>
+                        <label class="custom-file-label" for="validatedCustomFile">Seleccionar Archivo...</label>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary btn-sm">SUBIR</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;" >
+      <div class="row mt-5">
+          <div class="col-lg-4">
+              <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                  <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
+                  <div class="ml-3">
+                      <h5 class="text-white">Nuestra Oficina</h5>
+                      <p class="m-0">calle 50 #67-129 (piso 2-ofic #204)</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4">
+              <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                  <i class="fa fa-2x fa-envelope-open text-primary"></i>
+                  <div class="ml-3">
+                      <h5 class="text-white">Nuestro Email</h5>
+                      <p class="m-0">valencia.abogados.sas@gmail.com</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4">
+              <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                  <i class="fa fa-2x fa-phone-alt text-primary"></i>
+                  <div class="ml-3">
+                      <h5 class="text-white">CONTACTO</h5>
+                      <p class="m-0">3137937217</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row pt-5">
+          <div class="col-lg-3 col-md-6 mb-5">
+              <a href="index.html" class="navbar-brand">
+                  <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase" style="font-size: 90%;">Valencia Montoya
+                      Abogados S.A.S</h1>
+              </a>
+              <p style="font-size: 90%;">Prácticas Legales centradas en brindar soluciones efectivas para sus
+                  necesidades legales.</p>
+              <div class="d-flex justify-content-start mt-4">
+                  <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                          class="fab fa-twitter"></i></a>
+                  <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                          class="fab fa-facebook-f"></i></a>
+                  <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                          class="fab fa-linkedin-in"></i></a>
+                  <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-5">
+              <h4 class="font-weight-semi-bold text-primary mb-4">Mas info</h4>
+              <div class="d-flex flex-column justify-content-start">
+                  <a class="text-white mb-2" href="/index.html"><i
+                          class="fa fa-angle-right mr-2"></i>Inicio</a>
+                  <a class="text-white mb-2" href="/contact.html"><i
+                          class="fa fa-angle-right mr-2"></i>Contactos</a>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+              <h4 class="font-weight-semi-bold text-primary mb-4">Enlaces Rápidos</h4>
+              <div class="d-flex flex-column justify-content-start">
+
+                  <a class="text-white mb-2" href="/TIC.html"><i
+                          class="fa fa-angle-right mr-2"></i>Privacidad</a>
+                  <a class="text-white" href="https://maps.app.goo.gl/cXMVKvZvFGRoY5jN8"><i
+                          class="fa fa-angle-right mr-2"></i>BUSCA-MAPA</a>
+              </div>
+          </div>
+
+          <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
+              <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                  <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Valencia Montoya Abogados
+                          S.A.S</a>. Todos los Derechos Reservados.</p>
+              </div>
+              <div class="col-md-6 text-center text-md-right">
+                  <p class="m-0 text-white">Designed by <a class="font-weight-bold"
+                          href="https://663db46b1ecee8b36387bbee--portafolio-davidbaldovino-791581.netlify.app/">David
+                          Baldovino-Luisa Arias</a></p>
+              </div>
+          </div>
+      </div>
+      <!-- Footer End -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename ='js/material.min.js') }}">
+    
+</body>
+</html>

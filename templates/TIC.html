@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC Page</title>
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/static/css/tic.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="card">
+        <span class="small-text"></span>
+        <span class="title">Valencia Montoya Abogados S.A.S.</span>
+        <span class="desc">Sube o accede a tu información de trabajo.</span>
+        
+        <div class="buttons">
+            <!-- Primer botón con enlace a Google Drive y el icono de Google Drive -->
+            <a href="https://drive.google.com/drive/home?hl=es_ES" class="button" target="_blank">
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="34" height="34">
+                        <path fill="#4285F4" d="M20 6L14 16L34 42L40 32z"/>
+                        <path fill="#34A853" d="M14 16L4 32L14 42L24 26z"/>
+                        <path fill="#FBBC05" d="M34 16L24 26L14 42L34 42L44 26z"/>
+                    </svg>
+                </span>
+                <div class="button-text google">
+                    <span>Accede a</span>
+                    <span>Google Drive</span>
+                </div>
+            </a>
+            
+            <!-- Segundo botón con enlace a Google Forms y el icono de Google Forms -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5S-S9RUN4lUqNOAuCeX1Klwi9ycdqqnM5MdUaBsGyJISjDQ/viewform?usp=sf_link" class="button" target="_blank">
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="34" height="34">
+                        <path fill="#673AB7" d="M22 6H34V18H22z"/>
+                        <path fill="#5E35B1" d="M34 18V42H14V26L22 18H34z"/>
+                        <path fill="#9575CD" d="M14 26H22L34 42V26H14z"/>
+                        <path fill="#D1C4E9" d="M6 26H14V42H6z"/>
+                    </svg>
+                </span>
+                <div class="button-text apple">
+                    <span>Accede a</span>
+                    <span>Google Forms</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Botón de Logout -->
+    <div class="logout-button">
+        <a href="http://127.0.0.1:5000/logout"><button>Logout</button></a>
+    </div>
+</body>
+</html>

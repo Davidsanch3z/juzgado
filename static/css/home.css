@@ -1,0 +1,88 @@
+body {
+  background-color: #fff;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('/static/imgs/juiciovistageneral20-1-09blog.jpg');
+  background-size: cover; /* Ajusta la imagen para cubrir todo el cuerpo */
+  background-position: center;
+}
+
+.container {
+  width: 50%;
+  background-color: rgb(255, 255, 255) !important;
+  border-radius: 10px;
+  box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);
+  box-shadow: hsl(240, 36%, 34%) 0px 7px 29px 0px;
+  padding: 20px;
+}
+
+h2 {
+  font-weight: 800;
+  line-height: 60px !important; 
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+}
+
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff 
+}
+
+.btn-primary {
+  background-color: #B49C73;
+  border: none;
+  color: #fff;
+}
+
+.form-control {
+  flex: 1;
+  background-color: #fff 
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.custom-file-label::after {
+  content: "Seleccionar Archivo";
+}
+
+.bg-dark {
+  background-color: #343a40 !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-primary {
+  color: #B49C73 !important;
+}
+
+.material-icons {
+  vertical-align: middle;
+}
+
+.collapse {
+  background-color: rgb(234, 221, 180);
+  height: 100px;
+
+}
+.col-lg-9{
+  background-color: rgb(234, 221, 180);
+}
+#este {
+  color: #c6b079;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 5px; /* Espacio alrededor del texto para la sombra */
+  margin: 0 auto; /* Centra horizontalmente el elemento */
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.8); /* Cambia el valor alfa (0.8) para hacerlo más opaco */
+  text-align: left; /* Alinea el texto a la izquierda dentro del elemento */
+  max-width: 50%; /* Define el ancho máximo del elemento */
+  background-color: hsla(0, 0%, 0%, 0.461);
+}

@@ -1,0 +1,340 @@
+.button,
+.input,
+.select,
+.textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+body{
+    background-image: url(/static/images/72802.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+
+.modal-container {
+  max-height: 400px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 600px) {
+  .modal-container {
+    width: 90%;
+  }
+}
+
+.modal-container-header {
+  padding: 16px 32px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-container-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+  font-weight: 700;
+  font-size: 1.125;
+}
+
+.modal-container-title svg {
+  width: 32px;
+  height: 32px;
+  color: #750550;
+}
+
+.modal-container-body {
+  padding: 24px 32px 51px;
+  overflow-y: auto;
+}
+
+.rtf h1,
+.rtf h2,
+.rtf h3,
+.rtf h4,
+.rtf h5,
+.rtf h6 {
+  font-weight: 700;
+}
+
+.rtf h1 {
+  font-size: 1.5rem;
+  line-height: 1.125;
+}
+
+.rtf h2 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.rtf h3 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.rtf > * + * {
+  margin-top: 1em;
+}
+
+.rtf > * + :is(h1, h2, h3) {
+  margin-top: 2em;
+}
+
+.rtf > :is(h1, h2, h3) + * {
+  margin-top: 0.75em;
+}
+
+.rtf ul,
+.rtf ol {
+  margin-left: 20px;
+  list-style-position: inside;
+}
+
+.rtf ol {
+  list-style: numeric;
+}
+
+.rtf ul {
+  list-style: disc;
+}
+
+.modal-container-footer {
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid #ddd;
+  gap: 12px;
+  position: relative;
+}
+
+.modal-container-footer:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -51px;
+  left: 24px;
+  right: 24px;
+  height: 50px;
+  flex-shrink: 0;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.75), transparent);
+  pointer-events: none;
+}
+
+.button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.button.is-ghost:hover, .button.is-ghost:focus {
+  background-color: #dfdad7;
+}
+
+.button.is-primary {
+  background-color: #750550;
+  color: #fff;
+}
+
+.button.is-primary:hover, .button.is-primary:focus {
+  background-color: #4a0433;
+}
+
+.icon-button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.15s ease;
+}
+
+.icon-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-button:hover, .icon-button:focus {
+  background-color: #dfdad7;
+}
+/* Estilos del botón */
+.styled-button {
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    text-decoration: none; /* Sin subrayado para el texto */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+/* Estilos al pasar el cursor sobre el botón */
+.styled-button:hover {
+    background-color: #0056b3; /* Cambio de color de fondo al pasar el cursor */
+}
+.reject-button {
+    background-color: #dc3545; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.reject-button:hover {
+    background-color: #c82333; /* Cambio de color de fondo al pasar el cursor */
+}
+/*-----------------------------------------------------------------#
+/* From Uiverse.io by Yaya12085 */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4; /* Opcional: color de fondo para mejor visualización */
+  font-family: 'Roboto', sans-serif; /* Aplica la tipografía Roboto a todo el cuerpo */
+}
+
+.card {
+  max-width: 350px;
+  transform: scale(1.3); /* Aumenta el tamaño total en un 30% */
+  background-color: rgb(7 16 45);
+  background: linear-gradient(to top right, rgb(7 16 45), rgb(58 60 84));
+  background: -webkit-linear-gradient(to top right, rgb(7 16 45), rgb(58 60 84));
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgb(84 90 106);
+  margin: 0 auto; /* Mantener el centrado horizontal */
+}
+
+.small-text, .title, .desc {
+  font-weight: 600;
+}
+
+.title, .desc {
+  margin: 8px 0;
+}
+
+.small-text {
+  color: #488aec;
+  font-size: 30px; /* Aumento del tamaño de la fuente */
+}
+
+.title {
+  color: #fff;
+  font-size: 34px; /* Aumento del tamaño de la fuente */
+  line-height: 34px;
+}
+
+.desc {
+  color: rgb(151 153 167);
+  font-size: 17px; /* Aumento del tamaño de la fuente */
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px; /* Ajuste de espacio entre botones */
+  margin-top: 15px; /* Ajuste del margen superior */
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px; /* Ajuste de los bordes */
+  padding: 8px; /* Ajuste del padding */
+  text-decoration: none;
+}
+
+.button:first-child {
+  box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+  background-color: #488aec;
+}
+
+.button:last-child {
+  box-shadow: 0 4px 6px -1px #0b162531, 0 2px 4px -1px #0e192b17;
+  background-color: #fff;
+  border: 2px solid rgb(84 90 106); /* Agrega un borde al segundo botón */
+}
+
+.icon {
+  height: 32px; /* Ajuste del tamaño del icono */
+  width: 32px; /* Ajuste del tamaño del icono */
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.icon svg:last-child {
+  fill: #000;
+}
+
+.button-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px; /* Ajuste del margen izquierdo */
+}
+
+.button-text span:first-child {
+  font-size: 14px; /* Aumento del tamaño del texto */
+  font-weight: 600;
+}
+
+.google span:first-child {
+  color: rgb(219 206 253);
+}
+
+.apple span:first-child {
+  color: rgb(81 87 108);
+}
+
+.google span:last-child {
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px; /* Aumento del tamaño de la fuente */
+}
+
+.apple span:last-child {
+  color: #000;
+  font-weight: 800;
+  font-size: 16px; /* Aumento del tamaño de la fuente */
+}
